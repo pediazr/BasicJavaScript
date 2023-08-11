@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+    <script>
+        // Parte 1: Obtener la lista de elementos <p> y mostrarlos en un alert
+        var elementosP = document.getElementsByTagName('p');
+        var contenidoParrafos = '';
+
+        for (var i = 0; i < elementosP.length; i++) {
+            contenidoParrafos += elementosP[i].textContent + '\n';
+        }
+
+        alert(contenidoParrafos);
+
+        // Parte 2: Añadir un nuevo elemento <p> al <body> con un texto
+        var nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = 'Texto del nuevo párrafo';
+
+        var body = document.body;
+        body.appendChild(nuevoParrafo);
+    </script>
+</body>
+</html>
